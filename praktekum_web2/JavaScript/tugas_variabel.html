@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>JAVACRIPT</title>
+</head>
+<body>
+	<h1>VARIABEL</h1>
+	<p>STMIK INSAN PEMBANGUNAN TELUKNAGA SISTEM INFORMASI</p>
+	<p id="kalimat"></p>
+
+
+
+	<script>
+		var Nim = 2018804494;
+		var nama = "Ahmad Dimyati";
+		var matkul = "Program Web 2";
+		var nilai = 80;
+
+		document.getElementById("kalimat").innerHTML = "Mahasiswa yang bernama :<br>Nama : "+ nama + "<br>NIM : " + Nim + "<br><p>Pada Mata kuliah " + matkul + " mendapatkan nila "+ nilai + "</p>" ;
+
+		if (nilai >= 80){
+			document.write("Dengan Grade A");
+		}
+		else if(nilai >=70 && nilai <80){
+			document.write("Dengan Grade B");
+		}	
+		else if(nilai >=60 && nilai <70){
+			document.write("Dengan Grade C");
+		}
+		else {
+			document.write("MAAF NILAI ANDA TIDAK BISA DI TAMPILKAN KARENA JELEK");
+		}
+
+
+	</script>
+</body>
+</html>
