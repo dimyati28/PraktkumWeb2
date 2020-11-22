@@ -1,0 +1,42 @@
+<html>
+<head>
+	<title>Variabel</title>
+</head>
+<body>
+	<h1>Tugas Membuat Variabel</h1>
+	<p>STMIK Insan Pembangunan Teluknaga</p>
+	<p id="kalimat"></p>
+	<h4>Penjumlahan = <b id="tambah" /></h4>
+	<h4>Pengurangan = <b id="kurang" /></h4>
+	<h4>Pembagian = <b id="bagi" /></h4>
+	<h4>Perkalian = <b id="kali" /></h4>
+
+	<script>
+		var o = "AHMAD DIMYATI"
+		document.getElementById('kalimat').innerHTML = o ;
+
+		// Penjumlahan
+		var x = 100;
+		var y = 350;
+		document.getElementById ("tambah").innerHTML = x + y;
+
+		// Pengurangan
+		var a = 750;
+		var b = 250;
+		var c = 100;
+		document.getElementById ("kurang").innerHTML = a - b - c;
+
+		// Pembagian
+		var n = 100;
+		var i = 25;
+		document.getElementById ("bagi").innerHTML = n / i;
+
+		// Perkalian
+		const p = 300;
+		const u = 250;
+		document.getElementById ("kali").innerHTML = p * u;
+
+	</script>
+
+</body>
+</html>
