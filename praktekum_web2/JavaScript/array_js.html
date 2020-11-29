@@ -1,0 +1,44 @@
+<html>
+<head>
+	<title>Array</title>
+</head>
+<body>
+	<h1>PRAKTIKUM ARRAY JAVASCRIPT AHMAD DIMYATI</h1><hr>
+
+	<h4>SORT</h4><p id="sort"></p><hr>
+	<h4>REVERSE</h4><p id="reverse"></p><hr>
+	<h4>CONCT</h4><p  id="conct"></p><hr>
+	<h4>LENGTH</h4><P id="length"></P><hr>
+	<h4>JOIN</h4><p id="join"></p><hr>
+
+	<script>
+		//sort (mengurutkan), reverse (dari akhir), conct(menyatukan), length(jumlah), join(menggabungkan pemisahnya)
+
+		//sort
+		var matkul = ["JAVA WEB PROGRAMING","STATISTIKA","C++","DESIGN WEB & ANIMASI","LINUX"];
+		var kelas = ["SISTEM INFORMASI","TEKNIK INFORMASI"];
+		var data = matkul.concat(kelas);
+
+		document.getElementById("sort").innerHTML = matkul.sort() ;
+
+		//reverse
+		document.getElementById("reverse").innerHTML = matkul.reverse();
+
+		//conct
+		document.getElementById("conct").innerHTML = data;
+
+		//length
+		document.getElementById("length").innerHTML = data.length;
+
+		//join
+		document.getElementById("join").innerHTML = data.join(" # ");
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>
