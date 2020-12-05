@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title>OBJECT THIS</title>
+</head>
+<body>
+	<script>
+		function Person(namadepan, namabelakang)
+		{
+			this.namadepan = namadepan;
+			this.namabelakang = namabelakang;
+
+			this.namalengkap = function(){
+				return `${this.namadepan} ${this.namabelakang}`
+			}
+			this.cetaknama = function(){
+				document.write(this.namalengkap());
+			}
+		}
+
+		var person1 = new Person("Ahmad","Dimyati");
+		var person2 = new Person("Rendi","Kurniawan");
+
+		person1.cetaknama();
+		document.write("<br>");
+		person2.cetaknama();
+
+	</script>
+
+
+</body>
+</html>
