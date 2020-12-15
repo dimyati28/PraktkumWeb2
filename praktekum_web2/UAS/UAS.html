@@ -1,0 +1,116 @@
+<html>
+<title>Belajar</title>
+<body>
+<script LANGUAGE="JavaScript">
+
+function cek(){
+if(form.harga1.value == "" || form.jumlahbarang.value == ""){
+alert("data kosong"); //jika angka kosong maka pesan akan tampil
+exit;
+}
+}
+function ftotalharga() {
+cek();
+a=eval(form.harga1.value);
+b=eval(form.jumlahbarang.value);
+c=a*b
+form.totalharga.value = c;
+}
+function fhbayar() {
+	cek();
+	d=eval(form.bayar.value);
+	e=eval(form.totalharga.value);
+	f=d-e
+	form.kembalian.value=f;
+}
+function fulang() {
+	form.kdpenjualan.value="";
+	form.namabarang.value="";
+	form.harga1.value="";
+	form.jumlahbarang.value="";
+	form.totalharga.value="";
+	form.bayar.value="";
+	form.kembalian.value="";
+	output.value="";
+}
+
+function simpan() {
+	var kdjual = document.getElementById("form").kdpenjualan.value;
+	var kdbarang = document.getElementById("form").kdbrg.value;
+	var nmbarang = document.getElementById("form").namabarang.value;
+	var hrg1 = document.getElementById("form").harga1.value;
+	var jmbrg = document.getElementById("form").jumlahbarang.value;
+	var ttlhrg = document.getElementById("form").totalharga.value;
+	var byr = document.getElementById("form").bayar.value;
+	var kmbl = document.getElementById("form").kembalian.value;
+
+	var hasil = document.getElementById("output");
+	hasil.innerHTML = "<h1>OUTPUT</h1><br><hr><table><tr><td>Kode Penjualan :</td><td>"+kdjual+"</td></tr><tr><td>Kode Barang :</td><td>"+kdbarang+"</td></tr><tr><td>Nama Barang :</td><td>"+nmbarang+"</td></tr><tr><td>Harga Satuan :</td><td>"+hrg1+"</td></tr><tr><td>Jumlah Barang :</td><td>"+jmbrg+"</td></tr><tr><td>Total Harga : </td><td>"+ttlhrg+"</td></tr><tr><td>Bayar :</td><td>"+byr+"</td></tr><tr><td>Kembalian : </td><td>"+kmbl+"</td></tr></table>"
+
+	;
+	
+
+
+
+}
+
+
+</script>
+
+
+	<h1>UAS UTAMA PROGRAMAN BERBASIS WEB 2</h1>
+	<h2>PROGRAMAN PENJUALAN</h2>
+	<h1>INPUT</h1>
+	<hr>
+	<form name="form" id="form" method="POST">
+	<table border="1">
+	<tr>
+		<td>Kode Penjualan</td><td><input type="text" id="kdpenjualan"></td>
+	</tr>
+	<tr>
+		<td>Kode Barang</td>
+  		<td><select id="kdbrg" name="kdbrg" onchange="tampilnama()">
+    			<option value="A001">A001</option>
+    			<option value="A002">A002</option>
+    			<option value="A003">A003</option>
+  				</select>
+  		</td>
+	</tr>
+	<tr>
+		<td>Nama Barang</td><td><input type="text" name="namabarang" id="namabarang" ></td>
+	</tr>
+	<tr>
+		<td>Harga Satuan</td><td><input type=text name="harga1" id="harga1"></td>
+	</tr>
+	<tr>
+		<td>Jumlah Barang</td><td><input name="jumlahbarang" id="jumlahbarang" type="text"/></td>
+	</tr>
+	<tr>
+		<td></td><td><input type=button name="htotal" onclick="ftotalharga()" value="Hitung Total"></td>
+	</tr>
+
+	<tr>
+		<td>Total</td><td><input type="text" value="" name="totalharga"></td>
+	</tr>
+	<tr>
+		<td>Bayar</td><td><input type="text" name="bayar"></td>
+	</tr>
+	<tr>
+		<td></td><td><input type=button name="hbayar" onclick="fhbayar()" value="Hitung Bayar"></td>
+	</tr>
+	<tr>
+		<td>Kembalian</td><td><input type="text" name="kembalian"></td>
+	</tr>
+	<tr>
+		<td><input type="button" onclick="simpan()"  value="Simpan"></td><td><input type="button" onclick="fulang()"  value="Ulang"></td>
+	</tr>
+
+
+
+	</table>
+	</form>
+
+
+	<div id="output"></div>
+	</body>
+	</html>
